@@ -56,12 +56,13 @@ Clone the repository:
 git clone <YOUR_GITHUB_REPO_URL>
 cd msme-vendor-payment-system
 
- 🔐 Environment Variables
+### 🔐 Environment Variables
 
 Create a .env file using .env.example.
 DATABASE_URL=postgresql://username:password@localhost:5432/msme_db
 JWT_SECRET=your_jwt_secret
 PORT=3000
+---
 
 ▶️ Running the Application
 🧩 Database Schema
@@ -80,35 +81,15 @@ users
 Relationships
 
 Vendor → Purchase Orders (One-to-Many)
-
 Purchase Order → Payments (One-to-Many)
-
 Purchase Order → Items (One-to-Many)
+---
 
 🔑 Authentication
 Login API
 POST /auth/login
 
-
-Request Body:
-
-{
-  "email": "admin@qistonpe.com",
-  "password": "admin123"
-}
-
-
-Response:
-
-{
-  "access_token": "JWT_TOKEN"
-}
-
-
-Use this token in Postman:
-Authorization → Bearer Token → Paste JWT token.
-
-All protected APIs require this token.
+---
 
 📡 API Endpoints
 Vendors
@@ -118,7 +99,6 @@ POST /vendors
 GET /vendors
 
 GET /vendors/:id
-
 PUT /vendors/:id
 
 Purchase Orders
@@ -144,7 +124,7 @@ DELETE /payments/:id (soft delete)
 Analytics
 
 GET /analytics/vendor-outstanding
-
+---
 
 📊 Business Logic
 
