@@ -64,7 +64,7 @@ JWT_SECRET=your_jwt_secret
 PORT=3000
 ---
 
-▶️ Running the Application
+▶️** Running the Application**
 🧩 Database Schema
 Tables
 
